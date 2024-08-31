@@ -28,7 +28,7 @@ class Bot(Client):
         if Config.WEB_SUPPORT:
             app = web.AppRunner(web.Application(client_max_size=30000000))
             await app.setup()
-            await web.TCPSite(app, "0.0.0.0", 8080).start()
+            await web.TCPSite(app, "0.0.0.0", 8081).start()
             
         print(f"\033[1;96m @{me.username} Sᴛᴀʀᴛᴇᴅ......⚡️⚡️⚡️\033[0m")
         try: [await self.send_message(id, f"**__{me.first_name}  Iꜱ Sᴛᴀʀᴛᴇᴅ.....✨️__**") for id in Config.ADMIN]                              
